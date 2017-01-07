@@ -7,7 +7,6 @@ var createAnimation = function(name, n, interval) {
     var animFrames = [];
     for (var i = 1; i <= n; i++) {
         var str = name + "_0" + i + ".png";
-        console.log(str);
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         animFrames.push(frame);
     }
@@ -66,12 +65,10 @@ var GameScene = cc.Scene.extend({
         this.addChild(this.cat2);
         this.cat2.addChild(this.ball2);
         
-        console.log("AA");
-        
         this.cat1.runAction(createAnimation("cat1", 5, 0.15));
         this.ball1.runAction(createAnimation("ball1", 5, 0.15));
         this.cat2.runAction(createAnimation("cat2", 5, 0.12));
-        this.ball2.runAction(createAnimation("ball2", 5, 0.1));
+        this.ball2.runAction(createAnimation("ball2", 5, 0.11));
         
         var moveBall = cc.Sequence.create(
                 cc.MoveTo.create(0, 44, 60), cc.DelayTime.create(0.15),
