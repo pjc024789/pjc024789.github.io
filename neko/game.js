@@ -3,7 +3,7 @@ var loadSprite = function(name) {
         cc.spriteFrameCache.getSpriteFrame(name));
 }
 
-var createAnimation = function(name, n, interval) {
+var createAnimation = function(name, n, interval) { 
     var animFrames = [];
     for (var i = 1; i <= n; i++) {
         var str = name + "_0" + i + ".png";
